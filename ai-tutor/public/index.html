@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teach_Simple Voice AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- A simple header with a "Teach_Simple" logo text at top-left -->
+  <header class="app-header">
+    <div class="logo">Teach_Simple</div>
+  </header>
+
+  <div id="app">
+    <!-- Main bubble that shows the AI's listening / speaking states -->
+    <div id="bubble" class="bubble">
+      <div id="status" class="status-text">Loading...</div>
+      <!-- Three pulsing rings behind the bubble -->
+      <div class="ring-container">
+        <span class="ring ring1"></span>
+        <span class="ring ring2"></span>
+        <span class="ring ring3"></span>
+      </div>
+    </div>
+
+    <!-- Row of animated dots that remain visible as a "live" effect -->
+    <div id="dot-indicators" class="dot-indicators">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <!-- Hidden audio element for AI voice output -->
+    <audio id="audio" autoplay></audio>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>

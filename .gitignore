@@ -1,0 +1,67 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Debug files
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache directory
+.npm/
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Build artifacts
+dist/
+build/
+
+# IDE/editor specific
+.vscode/
+.idea/
+*.swp
+
+# Temporary files
+tmp/
+temp/
+*.bak
+
+# MacOS generated files
+._*
+
+# Test output
+test-output/
+
+# Local environment settings
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependency directories
+jspm_packages/
+
+# Miscellaneous
+*.tgz
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore server-related build artifacts
+public/**/*.map

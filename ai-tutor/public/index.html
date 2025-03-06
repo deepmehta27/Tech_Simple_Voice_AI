@@ -2,40 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Teach_Simple Voice AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Todo List</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- A simple header with a "Teach_Simple" logo text at top-left -->
-  <header class="app-header">
-    <div class="logo">Teach_Simple</div>
-  </header>
-
-  <div id="app">
-    <!-- Main bubble that shows the AI's listening / speaking states -->
-    <div id="bubble" class="bubble">
-      <div id="status" class="status-text">Loading...</div>
-      <!-- Three pulsing rings behind the bubble -->
-      <div class="ring-container">
-        <span class="ring ring1"></span>
-        <span class="ring ring2"></span>
-        <span class="ring ring3"></span>
-      </div>
+  <div class="container">
+    <div class="header">
+      <h1>VoiceBot</h1>
+      <p>Your voice-controlled todo list</p>
     </div>
 
-    <!-- Row of animated dots that remain visible as a "live" effect -->
-    <div id="dot-indicators" class="dot-indicators">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+    <!-- Listening box -->
+    <div id="listening-box" class="listening-box hidden">
+      <p id="transcript">Listening...</p>
     </div>
 
-    <!-- Hidden audio element for AI voice output -->
-    <audio id="audio" autoplay></audio>
+    <!-- Where the todos will appear -->
+    <div id="todos-container" class="todos-container"></div>
+
+    <!-- Floating voice button -->
+    <button id="voice-button" class="voice-button">
+      <!-- Mic icon -->
+      <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        width="24" 
+        height="24"
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor"
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+      >
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+        <line x1="12" x2="12" y1="19" y2="22"/>
+      </svg>
+    </button>
   </div>
 
-  <script src="client.js"></script>
+  <!-- Hidden audio element to stream AI voice output -->
+  <audio id="audio" hidden></audio>
+
+  <!-- Toast message (small notification) -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Main script that uses OpenAI Realtime + To-Do logic -->
+  <script src="script.js"></script>
 </body>
 </html>

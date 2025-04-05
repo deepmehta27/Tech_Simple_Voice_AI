@@ -1,15 +1,24 @@
 {
-  "name": "voice-todo",
+  "name": "ai-tutor",
   "version": "1.0.0",
-  "description": "Voice-Activated To-Do List using OpenAI Realtime",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "express": "^4.18.0",
-    "node-fetch": "^2.6.9"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "googleapis": "^144.0.0",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.85.1",
+    "ws": "^8.18.0"
   },
-  "type": "module"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
